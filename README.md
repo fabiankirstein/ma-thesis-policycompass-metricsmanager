@@ -51,9 +51,6 @@ If you chose PostgreSQL, you want to create a postgres user and a database:
 ```shell
   git clone git@github.com:policycompass/policycompass-services.git
   cd policycompass-services
-  git submodule init
-  git submodule update
-  git submodule foreach git checkout master
 ```
 * Install the Requirements
 ```shell
@@ -68,9 +65,8 @@ If you chose PostgreSQL, you want to create a postgres user and a database:
 ```shell
 	python manage.py migrate
     python manage.py syncdb
-	python manage.py loaddata metrics events common references visualizations
+	python manage.py loaddata metrics common references 
 ```
-
 * Start the application
 ```shell
 	python manage.py runserver
